@@ -15,9 +15,42 @@
 .menu-item:last-child {
   margin-right: 0;
 }
+  .menuLimiter {
+  width: 350px;
+  padding: 0 10px;
+  /* Зададим возможность горизонтальной прокрутки */
+  overflow-x: scroll;
+  /* Для Сафари дополнительно зададим инерцию при прокрутке.
+  С инерцией меню будет «оттягиваться» при попытке прокрутить
+  его за его пределы. */
+  -webkit-overflow-scrolling: touch;
+  /* ... */
+  /* Добавим дополнительный нижнее поле
+  элементу, в котором прокручивается меню */
+  padding-bottom: 20px;
+  /* С помощью отрицательного отступа
+  компенсируем «нарощенное» поле  */
+  margin-bottom: -20px;
+   /* ... */
+  mask-image: linear-gradient(
+      90deg,
+      transparent 0, rgba(0, 0, 0, .25) 9px,
+      #000 18px,
+      #000 calc(100% - 18px),
+      rgba(0, 0, 0, .25) calc(100% - 9px),
+      transparent
+    );
+}
+  .menuWrapper {
+  /* Спрячем всё, что выходит за границы родителя */
+  overflow: hidden;
+}
     </style>
   </head>
-<body><menu class="menu">
+<body>
+  <div class="menuWrapper">
+  <div class="menuLimiter">
+    <menu class="menu">
   <li class="menu-item">
     <a href="#">Роллы</a>
   </li>
@@ -40,5 +73,7 @@
     <a href="#">Напитки</a>
   </li>
 </menu>
+  </div>
+  </div>
   </body>
 </html>
