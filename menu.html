@@ -4,22 +4,23 @@
     <title>Меню с прокруткой</title>
     <meta charset="utf-8"> 
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-<style>
-.menu {
-  display: flex;
-  font: 24px/32px Bureausans, Arial, sans-serif;
-  list-style: none;
-}
-.menu-item {
-  margin-right: 12px;
-}
-.menu-item:last-child {
-  margin-right: 0;
-}
-  .menuLimiter {
-  width: 350px;
-  padding: 0 10px;
-  /* Зададим возможность горизонтальной прокрутки */
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .menu {
+      display: flex;
+      font: 24px/32px Bureausans, Arial, sans-serif;
+      list-style: none;
+      }
+      .menu-item {
+      margin-right: 12px;
+      }
+      .menu-item:last-child {
+      margin-right: 0;
+      }
+      .menuLimiter {
+      width: 350px;
+      padding: 0 10px;
+      /* Зададим возможность горизонтальной прокрутки */
   overflow-x: scroll;
   /* Для Сафари дополнительно зададим инерцию при прокрутке.
   С инерцией меню будет «оттягиваться» при попытке прокрутить
@@ -51,7 +52,7 @@
 <body>
   <div class="menuWrapper">
   <div class="menuLimiter">
-    <menu class="menu">
+  <menu class="menu">
   <li class="menu-item">
     <a href="#">Роллы</a>
   </li>
